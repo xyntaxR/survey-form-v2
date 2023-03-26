@@ -20,3 +20,5 @@ COPY src .
 EXPOSE 3000
 
 RUN npm test
+
+#add test
