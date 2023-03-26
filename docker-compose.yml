@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+    main:
+      build: ./
+      image: survey-form-v2:latest
+      restart: always
+      command: sh -c "npm start && npm test"
+      volumes:
+        - ./src:/var/www/app/src
+        - ./package.json:/var/www/app/package.json
+      ports:
+        - 3000:3000
+        - 9229:9229
